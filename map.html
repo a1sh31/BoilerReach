@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappy!</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <nav class="menu-bar">
+        <ul>
+            <li class ="menu-item">
+                <a href="html.html">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Explore News</a>
+                <ul class="dropdown">
+
+                    <li><a href="events.html" target="_blank">Upcoming Events</a></li>
+                    <li><a href="https://www.purdueexponent.org/" target="_blank">All things Purdue</a></li>
+                    <li><a href="https://www.purdue.edu/online/events/" target="_blank">Online Events</a></li>
+                    <li><a href="https://www.purdue.edu/newsroom/faculty-staff/purdue-today/" target="_blank">Subscribe</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Find Resources</a>
+                <ul class="dropdown">
+                    <li><a href="resources.html" target="_blank">Overview</a></li>
+                    <li><a href="https://www.purdue.edu/asc/resources/online-resources.html" target="_blank">Academic Resources</a></li>
+                    <li><a href="https://www.purdue.edu/advocacy/students/other/index.html" target="_blank">Student Services</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Discover Mappy</a>
+                <ul class="dropdown">
+                    <li><a href="map.html" target="_blank">Mappy!</a></li>
+                    <li><a href="https://www.purdue.edu/campus-map/" target="_blank">Campus Map</a></li>
+                    <li><a href="https://dining.purdue.edu/AboutUs/map.html" target="_blank">Dining</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    
+    <style>
+        
+        body{
+            font-family:Arial,sans-serif;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .map-container {
+            position: relative;
+            width: 1200px; 
+            height: 900px; 
+        
+
+        }
+
+       
+        .map-image {
+            width: 100%;
+            height: 100%;
+        }
+
+        
+        .pin {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -100%); 
+        }
+
+        
+        .pin::after {
+            content: attr(data-location);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .pin:hover::after {
+            opacity: 1;
+        }
+        .pin:hover {
+            background-color: rgb(142, 111, 62)
+        }
+        .menu-bar {
+        background-color: #000; 
+        padding: 10px 0;
+        text-align: center;
+        position: relative; 
+        }
+
+        .menu-bar ul {
+        list-style: none;
+        }
+
+        .menu-bar li {
+        display: inline-block; 
+        position: relative; 
+        margin: 0 15px;
+        }
+
+.menu-item {
+    color: #D39E00; 
+    text-decoration: none;
+    font-weight: bold;
+}
+        
+    </style>
+</head>
+<body>
+
+    <h1>
+    <div class="map-container">
+        
+        <img src="images/map.png" alt="Interactive Map" class="map-image">
+        <a href="https://maps.app.goo.gl/zJDAX9MR3SqvWUaR9" target="_blank">
+            <div class="pin" data-location="CoRec Gym" style="top: 25%; left: 37%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/zJDAX9MR3SqvWUaR9" target="_blank">
+        <div class="pin" data-location="Free Fitness Classes" style="top: 33%; left: 37%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/sfYWxfd9VjUDs3dy5" target="_blank">
+        <div class="pin" data-location="Purdue Center for Career Oppurtunities (CCO)" style="top:77%; left: 88%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/YqDHPzVNzWZiGqFd9" target="_blank">
+        <div class="pin" data-location="Stewart Self-Service Headshot Center" style="top: 60%; left: 80%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/fbHVMgqdPHWYA3hY7" target="_blank">
+        <div class="pin" data-location="Purdue Writing Lab" style="top: 35%; left: 42%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/7QQuEMnUjGAQ3HEY7" target="_blank">
+        <div class="pin" data-location="Purdue Galleries" style="top: 82%; left: 79%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/P6XrkbQdkSx18U498" target="_blank">
+        <div class="pin" data-location="Knowledge Lab" style="top: 40%; left: 77%;"></div>
+        </a>
+        <a href="https://maps.app.goo.gl/H6VyY5Euzh2B6ZX97" target="_blank">
+        <div class="pin" data-location="Bechtel Innovation Design Center" style="top: 38%; left: 53%;"></div>
+       </a>
+       <a href="https://maps.app.goo.gl/ErgCUDPPDoq5ydks7" target="_blank">
+        <div class="pin" data-location="Purdue Student Union Board" style="top: 60%; left: 85%;"></div>
+        </a>
+    </div>
+</h1>
+
+</body>
+</html>
